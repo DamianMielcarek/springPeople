@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Ludzie</title>
+</head>
+<body>
+<p style="color:green;" th:text="${message}" />
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+        </tr>
+        <tr th:each="person : ${people}">
+            <td th:text="${person.name}">Name</td>
+            <td th:text="${person.surname}">Surname</td>
+            <td>
+            <a th:href="@{/people/{id}(id=${person.id})}">
+                <span>Delete</span>
+            </a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

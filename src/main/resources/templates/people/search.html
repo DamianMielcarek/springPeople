@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Wyszukaj</title>
+</head>
+<body>
+    <h1>Wyszukiwanie</h1>
+    <form th:action="@{/people/results}" method="get">
+        <label>Szukaj po nazwisku</label>
+        <p><input type="text" th:field="${person.surname}"/></p>
+        <p><input type="submit" value="Wyszukaj"/></p>
+    </form>
+</body>
+</html>
